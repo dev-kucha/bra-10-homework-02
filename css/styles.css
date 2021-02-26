@@ -46,26 +46,64 @@
 
 .personal-items__item {
     width: 268px;
+    height: 340px;
     margin: 0 15px;
     position: relative;
 }
 
+    /* 3D flip card */
+.container3d {
+-webkit-perspective: 1200;
+perspective: 1200;
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d; 
+transform-style: preserve-3d;
+}
+
+.fliper3d {
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: .7s linear;
+    -moz-transition: .7s linear;
+    -o-transition: .7s linear;
+    transition: .7s linear;
+  }
+
+.front3d, .back3d {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front3d {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.back3d {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.container3d:hover .fliper3d {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+    /* 3D flip card */
+
 .personal-items__item-photo {
     height: 268px;
     margin-bottom: 20px;
-    transition: width 2s;
 }
-
-.personal-items__item-photo:hover {
-    visibility: hidden;
-    /* transform: scaleX(0) ; */
-/* transition: all .1s ease-in;
-animation-delay: 0.1s; */
-width: 0px
-
-}
-
-
 
 .personal-items-social {
     position: absolute;
@@ -78,12 +116,14 @@ width: 0px
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
 }
 
-.personal-items__item-photo:hover + .personal-items-social {
-    visibility: visible;
+/* .personal-items__item-photo {
+    transform: perspective(600px) rotateY(0deg);
 }
+.personal-items-social {
+    transform: perspective(600px) rotateY(180deg);
+} */
 
 .social-item {
     box-sizing: border-box;
@@ -92,7 +132,6 @@ width: 0px
     background-color: rgb(255, 255, 255, 0.3);
     margin: 2px;
     padding: 0;
-    
 }
 
 .social-item:hover {
@@ -135,7 +174,6 @@ width: 0px
 
 .item-1__photo {
     background-image: url('../img/01-userpic.jpg');
-    /* visibility: hidden; */
 }
 
 
