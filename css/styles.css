@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .page {
     height: 100vh;
     background-color: #f6f6f6;
@@ -5,11 +12,19 @@
     font-family: 'Lato', sans-serif;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .title {
@@ -39,9 +54,15 @@
 }
 
 .personal-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .personal-items__item {
@@ -53,48 +74,41 @@
 
     /* 3D flip card */
 .container3d {
--webkit-perspective: 1200;
-perspective: 1200;
--webkit-transform-style: preserve-3d;
--moz-transform-style: preserve-3d; 
-transform-style: preserve-3d;
+    -webkit-perspective: 1200;
+    perspective: 1200;
+    -webkit-transform-style: preserve-3d; 
+    transform-style: preserve-3d;
 }
 
 .fliper3d {
     position: relative;
     -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transition: .7s linear;
-    -moz-transition: .7s linear;
     -o-transition: .7s linear;
     transition: .7s linear;
-  }
+}
 
 .front3d, .back3d {
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .front3d {
     z-index: 2;
     -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
 
 .back3d {
     -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 
 .container3d:hover .fliper3d {
     -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
   }
@@ -113,20 +127,20 @@ transform-style: preserve-3d;
     opacity: 0.9;
     height: 268px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
-
-/* .personal-items__item-photo {
-    transform: perspective(600px) rotateY(0deg);
-}
-.personal-items-social {
-    transform: perspective(600px) rotateY(180deg);
-} */
 
 .social-item {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 42px;
     height: 42px;
     background-color: rgb(255, 255, 255, 0.3);
@@ -146,15 +160,21 @@ transform-style: preserve-3d;
 }
 
 .fa-twitter {
-    transform: translate(10px, 10px);
+    -webkit-transform: translate(10px, 10px);
+        -ms-transform: translate(10px, 10px);
+            transform: translate(10px, 10px);
 }
 
 .fa-facebook-f {
-    transform: translate(12px, 10px);
+    -webkit-transform: translate(12px, 10px);
+        -ms-transform: translate(12px, 10px);
+            transform: translate(12px, 10px);
 }
 
 .fa-google-plus-g {
-    transform: translate(8px, 10px);
+    -webkit-transform: translate(8px, 10px);
+        -ms-transform: translate(8px, 10px);
+            transform: translate(8px, 10px);
 }
 
 .personal-items__item-name {
