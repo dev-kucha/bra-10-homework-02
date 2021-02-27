@@ -72,15 +72,15 @@
     position: relative;
 }
 
-    /* 3D flip card */
-.container3d {
+    /* flip card 3D*/
+.flipcard3d__container3d {
     -webkit-perspective: 1200;
     perspective: 1200;
     -webkit-transform-style: preserve-3d; 
     transform-style: preserve-3d;
 }
 
-.fliper3d {
+.flipcard3d__fliper3d {
     position: relative;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -89,30 +89,30 @@
     transition: .7s linear;
 }
 
-.front3d, .back3d {
+.flipcard3d__front3d, .flipcard3d__back3d {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
-.front3d {
+.flipcard3d__front3d {
     z-index: 2;
     -webkit-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
 
-.back3d {
+.flipcard3d__back3d {
     -webkit-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 
-.container3d:hover .fliper3d {
+.flipcard3d__container3d:hover .flipcard3d__fliper3d {
     -webkit-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
   }
-    /* 3D flip card */
+    /* flip card 3D */
 
 .personal-items__item-photo {
     height: 268px;
